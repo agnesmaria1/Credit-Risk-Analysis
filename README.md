@@ -1,30 +1,33 @@
 # Credit-Risk-Analysis
 ## Overview of the Analysis
 
-In this section, describe the analysis you completed for the machine learning models used in this Challenge. This might include:
+Suppose that we have a dataset containing loans along with information about these loans. People have defaulted (stopped paying) some of the loans. Fitting a machine learning model to this data is supervised learning—because we already have the answers about this dataset (whether each loan has defaulted). Once we fit the model, the benefit of supervised learning is that we can use the model to make predictions about new data. That is, we can predict which loans in the future will be good or bad.
 
-* Explain the purpose of the analysis.
-* Explain what financial information the data was on, and what you needed to predict.
-* Provide basic information about the variables you were trying to predict (e.g., `value_counts`).
-* Describe the stages of the machine learning process you went through as part of this analysis.
-* Briefly touch on any methods you used (e.g., `LogisticRegression`, or any resampling method).
+We are building a toolbox of models by applying supervised learning techniques to predict whether a loan will default based on data supplied by a peer-to-peer lending company. To help us with our prediction, we are going to do these steps:
+
+* Check for any class imbalance.
+
+* Apply sampling techniques and use machine learning models to make accurate predictions for imbalanced data.
+
+* Compare the classification models and sampling algorithms.
+
+Split the Data into Training and Testing Sets
+
+Create a Logistic Regression Model with the Original Data
+
+Predict a Logistic Regression Model with Resampled Training Data
 
 ## Results
 
 Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all machine learning models.
 
-* Machine Learning Model 1:
-  * Description of Model 1 Accuracy, Precision, and Recall scores.
+* Logistic Regression Model with the Original Data:
+  * Model accuracy is 95.20%, Precision avg 99%, and Recall scores avg 99%.
 
 
-
-* Machine Learning Model 2:
-  * Description of Model 2 Accuracy, Precision, and Recall scores.
+* Logistic Regression Model with Resampled Training Data:
+  * Model accuracy is 95.20%, Precision avg 99%, and Recall scores avg 99%.
 
 ## Summary
 
-Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
-* Which one seems to perform best? How do you know it performs best?
-* Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
-
-If you do not recommend any of the models, please justify your reasoning.
+The values for the healthy loans (class 0) is virtually identical between the logistic regression models using both the original and the resampled data. For the 1 class (high-risk loans), the value associated with the model's precision is virtually identical between the model using oversampled data (0.95) and the original data (0.95). The recall number, however, is much higher for the logistic regression model using oversampled data at 0.99 versus the model using the original data at 0.91. Overall, the logistic regression model using the resampled data made much more accurate predictions for the loan data across both classes.
