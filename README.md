@@ -11,11 +11,13 @@ We are building a toolbox of models by applying supervised learning techniques t
 
 * Compare the classification models and sampling algorithms.
 
-Split the Data into Training and Testing Sets
+How we do it:
 
-Create a Logistic Regression Model with the Original Data
+* Split the Data into Training and Testing Sets
 
-Predict a Logistic Regression Model with Resampled Training Data
+* Create a Logistic Regression Model with the Original Data
+
+* Predict a Logistic Regression Model with Resampled Training Data
 
 ## Results
 
